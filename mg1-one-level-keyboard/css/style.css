@@ -1,0 +1,75 @@
+body {
+  font-family: Calibri;
+  transition: 0.2s ease;
+  text-align: center;
+}
+body.success  {
+  background-color: #b7f0b7;
+  transition: 0.2s ease;
+}
+.game-container {
+  margin: 0px auto;
+}
+
+p {
+  margin: 10px 0px;
+  padding: 0px;
+  text-align: center;
+}
+.game-map {
+  position: relative;
+}
+div.layer, 
+div.layer div {
+  position: absolute;
+}
+#tiles div {
+  border: 1px solid grey;
+}
+.default .floor {
+  background-color: lightgrey;
+}
+.default .wall {
+  background-color: skyblue;
+}
+.player {
+  background-color: #90ee90;
+  border: 1px solid green;
+}
+.goal {
+  background-color: #FFD700;
+  border: 1px solid #98720b;
+}
+.player {
+  background-color: #90ee90;
+  border: 1px solid green;
+  transition: left 0.2s linear, top 0.2s linear;
+}
+/*
+ *  success message
+ */
+#success-msg {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: absolute;
+  padding: 5px 5px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  width: calc(100% - 8px);
+}
+body.success #success-msg {
+  opacity: 1;
+  transition: opacity 0.2 ease;
+}
+#map-and-controls {
+  display: flex;
+  justify-content: center;
+}
+/*
+ * player and goal are slightly smaller than tiles
+ */
+.player, 
+.goal {
+  transform-origin: center;
+  transform:scale(0.85);
+}
